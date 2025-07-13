@@ -1,12 +1,13 @@
 #include <iostream>
 #include <string>
-#include <buffer_cache.hpp>
+#include "command_handle.hpp"
+#include "buffer_cache.hpp"
 
 int main(void)
 {
-    init();
+   // init();
     // Register commands
-    populate_command_maps();  
+    Command cmd;
 
     std::cout << "Welcome! Type 'help' to see available commands.\n";
 
@@ -20,10 +21,11 @@ int main(void)
 
         if (input == "exit") break; // Exit condition
 
-        parse_command(input); // Parse and execute the command
+        // Handle commands
+        cmd.handle_command(input); // Parse and execute the command
     }
 
-    release_alloced();
+    //release_alloced();
     return 0;
 
 }

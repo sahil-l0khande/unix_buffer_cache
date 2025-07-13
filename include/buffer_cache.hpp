@@ -41,13 +41,13 @@ typedef struct buffer_header {
     struct buffer_header* free_prev;
 } buffer_t;
 
-int* wating_queue;
+// int* wating_queue;
 
-// Pointer to an array of hash queue pointers
-buffer_t** hash_queue;
+// // Pointer to an array of hash queue pointers
+// buffer_t** hash_queue;
 
-// Head of free list
-buffer_t* free_list_head; // This will be dummy head node
+// // Head of free list
+// buffer_t* free_list_head; // This will be dummy head node
 
 
 // Input command mapping to handler functions
